@@ -16,8 +16,10 @@ from utils import read_jsonl, tokenize_with_chat_template, generate_with_classif
 import utils
 
 parser = argparse.ArgumentParser(description='')
+# parser.add_argument('--ref_model_id', default=None, type=str,
+#                     help='reference model id meta-llama/Llama-3.1-8B-Instruct')
 parser.add_argument('--ref_model_id', default=None, type=str,
-                    help='reference model id meta-llama/Llama-3.1-8B-Instruct')
+                    help='reference model id Qwen/Qwen3-8B')
 parser.add_argument('--classifier_type', default=None, type=str, help='whether to train Q (bottlenecked) or V classifier.')
 parser.add_argument('--classifier_model_id', default=None, type=str, help='classifier model id (for tokenizer, reuse weights)')
 parser.add_argument('--classifier_ckpt_path', required=True, type=str,

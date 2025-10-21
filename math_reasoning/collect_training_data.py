@@ -17,8 +17,10 @@ parser.add_argument('--end_index', default=-1, type=int, help='end index for dat
 parser.add_argument('--eval_ratio', default=0.1, type=float, help='ratio of data for evaluation')
 parser.add_argument('--is_first_round', required=True, type=int, help='whether this is the first round of collecting data, will zero init classifier and also do a split of train eval data if needed')
 
+# parser.add_argument('--ref_model_id', default=None, type=str,
+#                     help='reference model id meta-llama/Llama-3.1-8B-Instruct')
 parser.add_argument('--ref_model_id', default=None, type=str,
-                    help='reference model id meta-llama/Llama-3.1-8B-Instruct')
+                    help='reference model id Qwen/Qwen3-8B')
 parser.add_argument('--classifier_model_id', default=None, type=str, help='classifier model id (for tokenizer, reuse weights)')
 parser.add_argument('--classifier_ckpt_path', default=None, type=str, help='a ckpt path')
 parser.add_argument('--classifier_type', default=None, type=str, help='classifier type Q or V')
